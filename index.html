@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة المنارة - لبيع السيارات</title>
+    <style>
+        /* إعدادات أساسية */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            direction: rtl;
+            background-color: #f4f4f4;
+        }
+
+        /* الهيدر */
+        header {
+            background-color: #0d6efd;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            background-image: url('car-background.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        header .logo h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header nav ul {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        /* الأقسام */
+        section {
+            padding: 40px 20px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        /* معرض السيارات */
+        .car-gallery {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .car-item {
+            flex-basis: 30%;
+        }
+
+        .car-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* نموذج الاتصال */
+        form {
+            margin-top: 20px;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+
+        form button {
+            padding: 12px 20px;
+            background-color: #0d6efd;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        /* الفوتر */
+        footer {
+            background-color: #0d6efd;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* إعدادات الجوال */
+        @media (max-width: 768px) {
+            header .logo h1 {
+                font-size: 1.8em;
+            }
+
+            header nav ul {
+                text-align: center;
+                padding-top: 20px;
+            }
+
+            header nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .car-gallery {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .car-item {
+                margin-bottom: 20px;
+            }
+
+            form input, form textarea {
+                width: 90%;
+                margin: 10px auto;
+            }
+
+            form button {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الهيدر -->
+    <header>
+        <div class="logo">
+            <h1>المنارة</h1>
+            <p>أفضل مكان لشراء سيارتك الجديدة</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">عن الشركة</a></li>
+                <li><a href="#services">خدماتنا</a></li>
+                <li><a href="#cars">معرض السيارات</a></li>
+                <li><a href="#contact">التواصل</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- القسم الأول - عن الشركة -->
+    <section id="about">
+        <div class="container">
+            <h2>عن شركة المنارة</h2>
+            <p>نحن في شركة المنارة نقدم لك أفضل العروض على السيارات الجديدة. فريقنا جاهز دائمًا لتقديم استشارات مهنية وخدمات بيع احترافية.</p>
+        </div>
+    </section>
+
+    <!-- القسم الثاني - خدماتنا -->
+    <section id="services">
+        <div class="container">
+            <h2>خدماتنا</h2>
+            <ul>
+                <li>بيع السيارات الجديدة</li>
+                <li>خدمات التمويل</li>
+                <li>خدمات ما بعد البيع</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- القسم الثالث - معرض السيارات -->
+    <section id="cars">
+        <div class="container">
+            <h2>معرض السيارات</h2>
+            <div class="car-gallery">
+                <!-- صورة سيارة نائبة -->
+                <div class="car-item"><img src="car-placeholder.jpg" alt="سيارة 1"></div>
+                <div class="car-item"><img src="car-placeholder.jpg" alt="سيارة 2"></div>
+                <div class="car-item"><img src="car-placeholder.jpg" alt="سيارة 3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- القسم الرابع - التواصل -->
+    <section id="contact">
+        <div class="container">
+            <h2>التواصل معنا</h2>
+            <p>للتواصل معنا، يمكنك استخدام البريد الإلكتروني أو الرقم التالي:</p>
+            <ul>
+                <li>رقم الهاتف: +966510192446</li>
+                <li>البريد الإلكتروني: <a href="mailto:omarmerano500@gmail.com">omarmerano500@gmail.com</a></li>
+            </ul>
+            <form action="mailto:omarmerano500@gmail.com" method="post" enctype="text/plain">
+                <label for="name">الاسم:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="message">الرسالة:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">إرسال الرسالة</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer>
+        <p>&copy; 2025 شركة المنارة | القصيم، المملكة العربية السعودية</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // إضافة تأثيرات التمرير بشكل سلس عند الانتقال بين الأقسام
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+
+        // تأثيرات الانتقال بين الأقسام عند التمرير
+        document.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                const position = section.getBoundingClientRect().top;
+                if (position < window.innerHeight && position > 0) {
+                    section.classList.add('visible');
+                }
+            });
+        });
+
+        // التحقق من النموذج قبل الإرسال
+        document.querySelector('form').addEventListener('submit', function (e) {
+            const name = document.querySelector('#name').value;
+            const message = document.querySelector('#message').value;
+            if (!name || !message) {
+                alert('يرجى ملء جميع الحقول قبل الإرسال');
+                e.preventDefault(); // منع الإرسال إذا كانت الحقول فارغة
+            }
+        });
+    </script>
+
+</body>
+</html>
